@@ -79,7 +79,6 @@ YPEncodingType YPEncodingGetType(const char *typeEncoding) {
     for (unsigned int i = 0; i < attrCount; i++) {
         
         objc_property_attribute_t attr = attrs[i];
-        YPLog(@"name = %s, value = %s",attr.name,attr.value);
         switch (attr.name[0]) {
             case 'T': {
                 if (attr.value) {
@@ -181,35 +180,6 @@ YPEncodingType YPEncodingGetType(const char *typeEncoding) {
             _setter = NSSelectorFromString([NSString stringWithFormat:@"set%@%@:",[_name substringToIndex:1].uppercaseString,[_name substringFromIndex:1]]);
         }
     }
-    
-#if 0
-    if (type & YPEncodingTypePropertyCopy) {
-        YPLog(@"Copy");
-    }
-    if (type & YPEncodingTypePropertyReadonly) {
-        YPLog(@"Readonly");
-    }
-    if (type & YPEncodingTypePropertyRetain) {
-        YPLog(@"Retain");
-    }
-    if (type & YPEncodingTypePropertyWeak) {
-        YPLog(@"Weak");
-    }
-    if (type & YPEncodingTypePropertyNonatomic) {
-        YPLog(@"Nonatomic");
-    }
-    if (type & YPEncodingTypePropertyCustomSetter) {
-        YPLog(@"CustomSetter");
-    }
-    if (type & YPEncodingTypePropertyCustomGetter) {
-        YPLog(@"CustomGetter");
-    }
-    if (type & YPEncodingTypePropertyDynamic) {
-        YPLog(@"Dynamic");
-    }
-#endif
-    
-    
     
     return self;
 }

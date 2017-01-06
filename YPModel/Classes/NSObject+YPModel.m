@@ -85,7 +85,6 @@
         YPEncodingType type = propertyInfo.type;
         
         if (propertyInfo.isCNumber) { // 属性可以转化为NSNumber类型
-            YPLog(@"是Number类");
             // 先将字典中的value解析成NSNumber类型
             NSNumber *num = [self YPNSNumberCreateFromID:value];
             
@@ -144,7 +143,6 @@
                 default: break;
             }
         } else if (propertyInfo.nsType) { // 属性是NS类簇
-            YPLog(@"是NS类簇");
             switch (propertyInfo.nsType) {
                 case YPEncodingNSTypeNSString:
                 case YPEncodingNSTypeNSMutableString: { // NSString、NSMutableString类型的处理
