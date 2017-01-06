@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'YPModel'
-  s.version          = '0.1.1'
+  s.version          = '0.1.2'
   s.summary          = '一款平平淡淡的字典转模型框架'
 
 # This description is used to generate tags and improve search results.

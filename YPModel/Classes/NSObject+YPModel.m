@@ -70,8 +70,11 @@
     [objcPropertyList enumerateKeysAndObjectsUsingBlock:^(NSString * _Nonnull propertyName, YPClassPropertyInfo * _Nonnull propertyInfo, BOOL * _Nonnull stop) {
         
         // 4.0 首先取出自定义的属性名字典
-        NSDictionary *customPropertyNameDict = [(id)[obj class] customPropertyNameDict];
-        NSString *customPropertyName = customPropertyNameDict[propertyName];
+        NSString *customPropertyName = nil;
+        if ([(id)[obj class] respondsToSelector:@selector(customPropertyNameDict)]) {
+            NSDictionary *customPropertyNameDict = [(id)[obj class] customPropertyNameDict];
+            customPropertyName = customPropertyNameDict[propertyName];
+        }
         
         // 4.1 根据属性名从字典中取对应的value
         id value = dict[propertyName];

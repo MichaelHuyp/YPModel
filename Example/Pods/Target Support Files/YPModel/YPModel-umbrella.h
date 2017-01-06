@@ -10,6 +10,8 @@
 #endif
 #endif
 
+#import "NSObject+YPModel.h"
+#import "YPClassPropertyInfo.h"
 
 FOUNDATION_EXPORT double YPModelVersionNumber;
 FOUNDATION_EXPORT const unsigned char YPModelVersionString[];

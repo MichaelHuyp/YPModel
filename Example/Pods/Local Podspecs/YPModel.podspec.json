@@ -1,9 +1,9 @@
 {
   "name": "YPModel",
-  "version": "0.1.0",
-  "summary": "A short description of YPModel.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/YPModel",
+  "version": "0.1.2",
+  "summary": "一款平平淡淡的字典转模型框架",
+  "description": "一款平平淡淡的字典转模型框架,以后慢慢提高性能 参考YYModel",
+  "homepage": "https://github.com/MichaelHuyp/YPModel",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "MichaelHuyp": "86812684@qq.com"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/YPModel.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/MichaelHuyp/YPModel.git",
+    "tag": "0.1.2"
   },
   "platforms": {
     "ios": "8.0"
