@@ -1,0 +1,6 @@
+framework module YPModel {
+  umbrella header "YPModel-umbrella.h"
+
+  export *
+  module * { export * }
+}
